@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackground"
+    tools:context=".view.CountryDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/primaryColor">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivFlagDetail"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <TextView
+                    android:id="@+id/tvCountryNameDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:textColor="@color/textOnPrimary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivFlagDetail"
+                    app:layout_constraintTop_toTopOf="@id/ivFlagDetail"
+                    tools:text="El Salvador" />
+
+                <TextView
+                    android:id="@+id/tvOfficialName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/textOnPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvCountryNameDetail"
+                    app:layout_constraintTop_toBottomOf="@id/tvCountryNameDetail"
+                    tools:text="Republic of El Salvador" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detalles del País"
+                    android:textAppearance="@style/TextAppearance.App.Title"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capital"
+                    style="@style/TextAppearance.App.Label"/>
+                <TextView
+                    android:id="@+id/tvCapitalDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    tools:text="San Salvador"
+                    style="@style/TextAppearance.App.Body"
+                    android:textColor="@color/textPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Región / Subregión"
+                    style="@style/TextAppearance.App.Label"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tvRegionDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Americas"
+                        style="@style/TextAppearance.App.Body"
+                        android:textColor="@color/textPrimary"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" / "
+                        style="@style/TextAppearance.App.Body"
+                        android:textColor="@color/textSecondary"/>
+                    <TextView
+                        android:id="@+id/tvSubregionDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Central America"
+                        style="@style/TextAppearance.App.Body"
+                        android:textColor="@color/textPrimary"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Población"
+                    style="@style/TextAppearance.App.Label"/>
+                <TextView
+                    android:id="@+id/tvPopulationDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    tools:text="6,500,000"
+                    style="@style/TextAppearance.App.Body"
+                    android:textColor="@color/textPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monedas"
+                    style="@style/TextAppearance.App.Label"/>
+                <TextView
+                    android:id="@+id/tvCurrenciesDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    tools:text="USD (US Dollar - $)"
+                    style="@style/TextAppearance.App.Body"
+                    android:textColor="@color/textPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Idiomas"
+                    style="@style/TextAppearance.App.Label"/>
+                <TextView
+                    android:id="@+id/tvLanguagesDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Español"
+                    style="@style/TextAppearance.App.Body"
+                    android:textColor="@color/textPrimary"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvSectionWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clima en la Capital"
+                    android:textAppearance="@style/TextAppearance.App.Title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/weatherContent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSectionWeather">
+
+                    <ImageView
+                        android:id="@+id/ivWeatherIcon"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/tvTemperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
+                        android:textColor="@color/primaryColor"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/ivWeatherIcon"
+                        app:layout_constraintTop_toTopOf="@id/ivWeatherIcon"
+                        app:layout_constraintBottom_toBottomOf="@id/ivWeatherIcon"
+                        tools:text="25°C" />
+
+                    <TextView
+                        android:id="@+id/tvWeatherCondition"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:textAppearance="@style/TextAppearance.App.Title"
+                        android:textColor="@color/primaryColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvTemperature"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTemperature"
+                        tools:text="Parcialmente Nublado" />
+
+                    <ImageView
+                        android:id="@+id/iconHumidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_humidity"
+                        app:tint="@color/secondaryColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivWeatherIcon"/>
+
+                    <TextView
+                        android:id="@+id/tvHumidity"
+                        style="@style/TextAppearance.App.Body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/textPrimary"
+                        app:layout_constraintBottom_toBottomOf="@id/iconHumidity"
+                        app:layout_constraintStart_toEndOf="@id/iconHumidity"
+                        app:layout_constraintTop_toTopOf="@id/iconHumidity"
+                        tools:text="75%" />
+
+                    <ImageView
+                        android:id="@+id/iconWind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:src="@drawable/ic_wind"
+                        app:tint="@color/secondaryColor"
+                        app:layout_constraintBottom_toBottomOf="@id/iconHumidity"
+                        app:layout_constraintStart_toEndOf="@id/tvHumidity"
+                        app:layout_constraintTop_toTopOf="@id/iconHumidity"/>
+
+                    <TextView
+                        android:id="@+id/tvWind"
+                        style="@style/TextAppearance.App.Body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/textPrimary"
+                        app:layout_constraintBottom_toBottomOf="@id/iconWind"
+                        app:layout_constraintStart_toEndOf="@id/iconWind"
+                        app:layout_constraintTop_toTopOf="@id/iconWind"
+                        tools:text="10 kph" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ProgressBar
+                    android:id="@+id/weatherProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSectionWeather" />
+
+                <TextView
+                    android:id="@+id/tvWeatherError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="No se pudo cargar el clima."
+                    android:textAppearance="@style/TextAppearance.App.Body"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSectionWeather" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

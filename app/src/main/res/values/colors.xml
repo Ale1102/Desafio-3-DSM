@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="logo_blue">#0091EA</color>
+    <color name="logo_yellow">#FFC107</color>
+    <color name="logo_white">#FFFFFF</color>
+
+    <color name="primaryColor">@color/logo_blue</color>
+    <color name="primaryDarkColor">#0064B7</color> <color name="secondaryColor">@color/logo_yellow</color>
+
+    <color name="appBackground">#F0F4F8</color> <color name="cardBackground">@color/logo_white</color>
+
+    <color name="textPrimary">#212121</color> <color name="textSecondary">#757575</color> <color name="textOnPrimary">@color/logo_white</color> </resources>
